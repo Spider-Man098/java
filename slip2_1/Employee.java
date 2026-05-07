@@ -6,7 +6,7 @@ B. Manager: Display all above information with salary drawn.
 C. Sales Manager: Display all above information and commission if applicable. */
 
 
-package slip2_1;
+package Slip2_1;
 
 class Emp{
     String name;
