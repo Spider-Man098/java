@@ -1,9 +1,8 @@
 package Slip9_2;
 
 /* Write a client-server program using TCP sockets to echo the message sent by the
-client */.
+client */
 
-package Slip9_2;
 
 import java.io.*;
 import java.net.*;

@@ -1,5 +1,4 @@
 package Slip9_2;
-package Slip9_2;
 
 import java.io.*;
 import java.net.*;

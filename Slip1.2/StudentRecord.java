@@ -1,4 +1,8 @@
 package Slip1_2;
+/* Develop a Java application that connects to a MySQL database to manage student
+information. Implement CRUD operations for student records using JDBC. Use
+prepared statements to handle SQL queries securely and ensure proper transaction
+management. */
 
 import java.sql.*;
 import java.util.Scanner;

@@ -30,8 +30,7 @@ public class  Student
 
             if(marks > 100)
             {
-                throw new MarksOutOfBoundException(
-                        "Marks Out Of Bound");
+                throw new MarksOutOfBoundException("Marks Out Of Bound");
             }
 
             System.out.println("Roll No: " + rollNo);
