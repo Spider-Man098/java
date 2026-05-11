@@ -1,3 +1,5 @@
+package Slip17_2;
+
 
 /*Write a program to design an admission enquiry for MCA student form using
 Swing.*/
@@ -6,7 +8,7 @@ Swing.*/
 import java.awt.event.*;
 import javax.swing.*;
 
-class Admission extends JFrame implements ActionListener
+class MCAAdmissionForm extends JFrame implements ActionListener
 {
     JLabel l1, l2, l3, l4, l5, l6;
     JTextField t1, t2, t3;
@@ -14,7 +16,7 @@ class Admission extends JFrame implements ActionListener
     JComboBox c1;
     JButton b1;
 
-    Admission()
+    MCAAdmissionForm()
     {
         setTitle("MCA Admission Enquiry Form");
 
@@ -103,6 +105,6 @@ class Admission extends JFrame implements ActionListener
 
     public static void main(String args[])
     {
-        new Admission();
+        new MCAAdmissionForm();
     }
 }

@@ -1,9 +1,8 @@
 package Slip7_2;
-
-public /* Write a program to demonstrate how the process tasks asynchronously in a Spring
+/* Write a program to demonstrate how the process tasks asynchronously in a Spring
 Boot application. */
 
-/* 1.go to start.spring.import 
+/* 1.go to start.spring.io 
 2.download file 
 3.open the file in intellij and run the application
 4.go to src/main/java/com/example/demo/DemoApplication.java
