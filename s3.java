@@ -1,6 +1,6 @@
 import employeee.emp;
 
-public class S3
+public class s3
 {
     public static void main(String args[])
     {
