@@ -1,0 +1,73 @@
+1. Create a Java file named DatabaseGUI.java
+
+2. Type the Java program and save it
+
+3. Install MySQL Server
+
+sudo apt update
+sudo apt install mysql-server
+
+4. Start MySQL Service
+
+sudo systemctl start mysql
+
+5. Open MySQL
+
+sudo mysql
+
+6. Create Database
+
+CREATE DATABASE studentdb;
+
+7. Use Database
+
+USE studentdb;
+
+8. Create Table
+
+CREATE TABLE student(
+    id INT,
+    name VARCHAR(50)
+);
+
+9. Exit MySQL
+
+exit;
+
+10. Download MySQL JDBC Driver
+
+11. Extract ZIP file
+
+12. Copy:
+mysql-connector-j-9.7.0.jar
+
+into same folder where DatabaseGUI.java is present
+
+13. Open Terminal in Project Folder
+
+14. Compile Program
+
+javac -cp ".:mysql-connector-j-9.7.0.jar" DatabaseGUI.java
+
+15. Run Program
+
+java -cp ".:mysql-connector-j-9.7.0.jar" DatabaseGUI
+
+16. GUI Window will open
+
+17. Enter:
+Student ID
+Student Name
+
+18. Click Insert Button
+
+19. Message:
+Record Inserted Successfully
+
+20. Check Records
+
+sudo mysql
+
+USE studentdb;
+
+SELECT * FROM student;
