@@ -5,16 +5,17 @@ class Employee {
     int empId;
     String name;
     double salary;
+    String dob;
+
 
     void acceptEmployee(Scanner sc) {
         System.out.print("Enter Employee ID: ");
         empId = sc.nextInt();
-
         sc.nextLine();
-
-        System.out.print("Enter Employee Name: ");
+        System.out.print("Enter Employee Name: ");1
         name = sc.nextLine();
-
+        System.out.print("Enter date of birth: ");
+        dob = sc.nextLine();
         System.out.print("Enter Salary: ");
         salary = sc.nextDouble();
     }
@@ -24,6 +25,7 @@ class Employee {
         System.out.println("----------------");
         System.out.println("Employee ID : " + empId);
         System.out.println("Employee Name : " + name);
+        System.out.println("date of birth : " + dob);
         System.out.println("Salary : " + salary);
     }
 }
@@ -34,7 +36,6 @@ class Manager extends Employee {
 
     void acceptManager(Scanner sc) {
         acceptEmployee(sc);
-
         sc.nextLine();
 
         System.out.print("Enter Department: ");
@@ -76,21 +77,19 @@ class SalesManager extends Manager {
 
 // Main Class
 public class s2 {
-
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         int choice;
 
         do {
-
             System.out.println("\n===== MENU =====");
             System.out.println("1. Employee");
             System.out.println("2. Manager");
             System.out.println("3. Sales Manager");
             System.out.println("4. Exit");
-
             System.out.print("Enter your choice: ");
+
             choice = sc.nextInt();
 
             switch (choice) {
