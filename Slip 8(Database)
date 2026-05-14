@@ -1,0 +1,99 @@
+import javax.swing.*;
+import java.awt.event.*;
+import java.sql.*;
+
+class DatabaseGUI extends JFrame implements ActionListener
+{
+    JLabel l1, l2;
+
+    JTextField t1, t2;
+
+    JButton b1;
+
+    Connection con;
+
+    PreparedStatement pst;
+
+    DatabaseGUI()
+    {
+        l1 = new JLabel("Student ID");
+        l1.setBounds(50, 50, 100, 30);
+
+        t1 = new JTextField();
+        t1.setBounds(150, 50, 150, 30);
+
+        l2 = new JLabel("Student Name");
+        l2.setBounds(50, 100, 100, 30);
+
+        t2 = new JTextField();
+        t2.setBounds(150, 100, 150, 30);
+
+        b1 = new JButton("Insert");
+        b1.setBounds(120, 160, 100, 30);
+
+        add(l1);
+        add(t1);
+
+        add(l2);
+        add(t2);
+
+        add(b1);
+
+        b1.addActionListener(this);
+
+        setSize(400, 300);
+
+        setLayout(null);
+
+        setVisible(true);
+
+        try
+        {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            con = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/studentdb",
+                "root",
+                "root123"
+            );
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
+    }
+
+    public void actionPerformed(ActionEvent ae)
+    {
+        try
+        {
+            int id = Integer.parseInt(t1.getText());
+
+            String name = t2.getText();
+
+            pst = con.prepareStatement(
+                "insert into student values(?,?)"
+            );
+
+            pst.setInt(1, id);
+
+            pst.setString(2, name);
+
+            pst.executeUpdate();
+
+            JOptionPane.showMessageDialog(
+                this,
+                "Record Inserted Successfully"
+            );
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
+    }
+
+    public static void main(String args[])
+    {
+        new DatabaseGUI();
+    }
+}
